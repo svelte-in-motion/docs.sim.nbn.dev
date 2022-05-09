@@ -1,0 +1,1 @@
+import{S as t,i as s,s as o}from"../../../chunks/index-fdc571c5.js";import"../../../chunks/scroll-fc938a7a.js";import"../../../chunks/singletons-01f6dffe.js";class l extends t{constructor(e){super(),s(this,e,null,null,o,{})}}export{l as default};

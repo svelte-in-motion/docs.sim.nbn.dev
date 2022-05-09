@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="icon"
+            href="../../favicon.png"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+
+        <script>
+            const key = "svelteness::color-scheme";
+            const scheme = localStorage[key];
+            const prefersDark = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+            if (
+                scheme === "dark" ||
+                (scheme !== "light" && prefersDark)
+            ) {
+                document.documentElement.classList.add(
+                    "dark"
+                );
+            } else {
+                document.documentElement.classList.remove(
+                    "dark"
+                );
+            }
+        </script>
+
+        <meta http-equiv="content-security-policy" content=""><title>Core: Stores - Duration | Svelte-In-Motion</title>
+        
+	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
+	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
+	<link rel="modulepreload" href="/_app/start-b077cbfd.js">
+	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
+	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
+	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-65c49d4e.js">
+	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
+	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
+	<link rel="modulepreload" href="/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js">
+	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-duration.md-384d0cd8.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeFence-bf275b3f.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
+	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
+    </head>
+    <body>
+        <div>
+
+
+
+
+<div class="kit-docs bg-gray-body min-h-full min-w-full h-full transition-transform duration-150 ease-out" style="font-family: var(--kd-font-family-sans, inherit); --kd--navbar-height: calc(var(--kd-navbar-height) + var(--kd-breadcrumbs-height));"><div class="fixed top-0 z-30 w-full flex-none transform-gpu transition-transform duration-150 ease-out supports-backdrop-blur:bg-white/60 bg-gray-200/95 backdrop-blur dark:bg-gray-800/60 translate-y-0" style="border-bottom: var(--kd-navbar-border-bottom);"><div class="flex w-full flex-col items-center justify-center mx-auto max-w-[var(--kd-navbar-max-width)] p-[var(--kd-navbar-padding)] h-[var(--kd--navbar-height)]"><div class="flex w-full items-center"><div class="logo svelte-wkjwtt" slot="navbar-left">
+  <a class="group transform-gpu text-lg font-medium transition-transform hover:scale-105" href="/">
+    <span class="inline-block transform transition-transform duration-100 group-hover:translate-x-0">Svelte-In-Motion</span>
+    </a></div>
+        
+
+    <div class="flex-1"></div>
+
+    <div class="992:hidden -mr-2 flex items-center">
+
+      <div class="relative inline-block text-left not-prose"><button id="popover-button-33" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="popover-33" aria-expanded="false" aria-haspopup="true"><svg width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z"/><!-- HTML_TAG_END --></svg>
+          <span class="sr-only">Main navigation menu</span>
+        </button>
+
+  <div class="fixed top-0 left-0 bg-black/40 backdrop-blur-sm dark:bg-gray-700/80 transition-opacity duration-75 pointer-events-auto z-40 w-screen h-screen opacity-0 invisible"></div>
+
+  <div hidden></div>
+
+</div></div>
+
+    <div class="992:flex 992:items-center hidden"><nav><ul class="flex items-center space-x-8 text-lg font-medium"><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 text-gray-soft hover:text-gray-inverse" href="/docs">Docs</a></li><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 border-b hover:border-b-2 border-brand text-gray-inverse" href="/references">API References</a></li></ul></nav>
+
+      
+        
+
+      <div class="border-gray-divider ml-6 mr-2.5 h-7 w-2 border-l-[1.5px]"></div>
+
+      <div class="hidden 992:flex items-center">
+        
+        <div class="relative inline-block text-left not-prose"><button id="menu-button-33" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="menu-33" aria-expanded="false" aria-haspopup="true"><svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-6 w-6"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/><!-- HTML_TAG_END --></svg>
+    <span class="sr-only">Color Scheme</span>
+  </button>
+
+  <div hidden></div>
+
+</div></div></div></div>
+
+  <div class="border-gray-divider 992:hidden flex w-full items-center mt-4 pt-4 border-t"><button id="main-sidebar-button" type="button" class="text-gray-soft hover:text-gray-inverse inline-flex justify-center rounded-md p-2 text-sm font-medium" aria-controls="main-sidebar" aria-expanded="false" aria-haspopup="true"><span class="sr-only">Open main sidebar</span>
+                  <svg width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M21 18v2H3v-2h18zM17.05 3.55L22 8.5l-4.95 4.95v-9.9zM12 11v2H3v-2h9zm0-7v2H3V4h9z"/><!-- HTML_TAG_END --></svg></button>
+
+              <ol class="text-md text-gray-soft flex items-center whitespace-nowrap leading-6 mt-px ml-2.5"><li class="flex items-center">Core
+                      <svg width="16" height="16" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mx-1"><!-- HTML_TAG_START --><path fill="currentColor" d="m13.172 12l-4.95-4.95l1.414-1.414L16 12l-6.364 6.364l-1.414-1.414z"/><!-- HTML_TAG_END --></svg></li>
+                  <li class="truncate font-semibold text-slate-900 dark:text-slate-200">Stores - Duration</li></ol></div>
+
+          
+        </div></div>
+
+  <div class="mx-auto w-full flex flex-row min-h-full max-w-[var(--kd-content-max-width)] pt-[var(--kd--navbar-height)] z-20"><aside id="main-sidebar" class="sidebar self-start fixed top-0 left-0 transform bg-gray-body z-50 border-gray-divider border-r -translate-x-full transform transition-transform duration-200 ease-out will-change-transform max-h-screen min-h-screen min-w-[var(--kd-sidebar-min-width)] max-w-[var(--kd-sidebar-max-width)] 992:translate-x-0 922:block 992:sticky 992:z-0 overflow-y-auto p-[var(--kd-sidebar-padding)] 992:top-[var(--kd--navbar-height)] 992:min-h-[calc(100vh-var(--kd--navbar-height))] 992:max-h-[calc(100vh-var(--kd--navbar-height))]" role="dialog" aria-modal="true" style=""><div class="992:hidden sticky top-0 left-0 flex items-center"><div class="flex-1"></div>
+    <button class="text-gray-soft hover:text-gray-inverse p-4 -mx-6 pointer-events-none"><svg width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="m12 10.586l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.414 1.414l-4.95-4.95l-4.95 4.95l-1.414-1.414l4.95-4.95l-4.95-4.95L7.05 5.636z"/><!-- HTML_TAG_END --></svg>
+      <span class="sr-only">Close sidebar</span></button></div>
+
+  <nav class="992:px-1">
+
+    
+
+    <ul class="mt-8 pb-28 992:pb-0">
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">References
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/references/overview" style="">
+                  Overview
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/references/contexts" style="">
+                  Contexts
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Animations
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/overview" style="">
+                  Overview
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/actions-transition" style="">
+                  Actions - Transition
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-fade" style="">
+                  Components - Fade
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-playback" style="">
+                  Components - Playback
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-rotate" style="">
+                  Components - Rotate
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-scale" style="">
+                  Components - Scale
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-transition" style="">
+                  Components - Transition
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/components-translate" style="">
+                  Components - Translate
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/transitions-opacity" style="">
+                  Transitions - Opacity
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/transitions-rotate" style="">
+                  Transitions - Rotate
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/transitions-scale" style="">
+                  Transitions - Scale
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/animations/transitions-translate" style="">
+                  Transitions - Translate
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Bundling
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/bundling/overview" style="">
+                  Overview
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/bundling/bundle" style="">
+                  bundle
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Core
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/overview" style="">
+                  Overview
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-advance" style="">
+                  Stores - Advance
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-completion" style="">
+                  Stores - Completion
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 text-brand font-semibold" href="/references/core/stores-duration" style="border-color: var(--kd-sidebar-border-active);">
+                  Stores - Duration
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-frame" style="">
+                  Stores - Frame
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-framerate" style="">
+                  Stores - Frame Rate
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-interpolate" style="">
+                  Stores - Interpolate
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-maxframes" style="">
+                  Stores - Max Frames
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-playing" style="">
+                  Stores - Playing
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-random" style="">
+                  Stores - Random
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-seek" style="">
+                  Stores - Seek
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/core/stores-state" style="">
+                  Stores - State
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Encoding
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/encoding/overview" style="">
+                  Overview
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Metadata
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/metadata/overview" style="">
+                  Overview
+                  </a>
+              </li></ul>
+        </li>
+        <li class="992:mt-10 mt-12 first:mt-0"><h5 class="text-gray-strong 992:mb-3 mb-8 text-lg font-semibold">Storage
+            </h5>
+          <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/overview" style="">
+                  Overview
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/drivers-idriver" style="">
+                  Drivers - IDriver
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/drivers-indexeddb" style="">
+                  Drivers - IndexedDB
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/utilities-compression" style="">
+                  Utilities - Compression
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/utilities-encoding" style="">
+                  Utilities - Encoding
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/storage/utilities-mimetypes" style="">
+                  Utilities - Mimetypes
+                  </a>
+              </li></ul>
+        </li></ul>
+
+    
+        </nav></aside>
+
+<div class="992:hidden z-40"><div class="fixed top-0 left-0 bg-black/40 backdrop-blur-sm dark:bg-gray-700/80 transition-opacity duration-75 pointer-events-auto z-40 w-screen h-screen opacity-0 invisible"></div></div>
+
+    <main class="w-full overflow-x-hidden 992:min-h-[calc(100vh-var(--kd--navbar-height))] min-h-[calc(100vh-var(--kd--navbar-height))] px-8 992:px-16 pt-8" style="max-width: var(--kd-main-max-width, var(--kd-article-max-width));">
+
+      <article class="markdown prose dark:prose-invert z-10 max-w-[var(--kd-article-max-width)]"><p class="text-brand mb-3.5 text-[15px] font-semibold leading-6">Core</p>
+
+          
+
+<h1>Stores - Duration</h1>
+<p><code>duration</code> is a 
+<a href="https://svelte.dev/docs#run-time-svelte-store-writable" target="_blank" rel="noopener noreferrer">Svelte Store</a> that returns the how long in seconds the video is, deriving its value from 
+<a href="/references/core/stores-framerate"><code>framerate</code></a> and 
+<a href="/references/core/stores-maxframes"><code>maxframes</code></a> Stores.</p>
+<h2 id="imports" tabindex="-1">
+<a class="header-anchor" href="#imports" aria-hidden="true">#</a> Imports</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">CONTEXT_DURATION</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">duration</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="definitions" tabindex="-1">
+<a class="header-anchor" href="#definitions" aria-hidden="true">#</a> Definitions</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #DCDCAA">duration</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">framerate</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">IFrameRateStore</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">maxframes</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">IMaxFramesStore</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">}) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="usage" tabindex="-1">
+<a class="header-anchor" href="#usage" aria-hidden="true">#</a> Usage</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">duration</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">framerate</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">maxframes</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">framerate_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">framerate</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">60</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">maxframes_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">maxframes</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">60</span><span style="color: #D4D4D4"> * </span><span style="color: #B5CEA8">5</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">duration_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">duration</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">framerate:</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">framerate_store</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">maxframes:</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">maxframes_store</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">});</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="context-duration" tabindex="-1">
+<a class="header-anchor" href="#context-duration" aria-hidden="true">#</a> <code>CONTEXT_DURATION</code></h2>
+<p><code>CONTEXT_DURATION</code> handles making a new <code>duration</code> Store based on the current 
+<a href="https://svelte.dev/docs#run-time-svelte-setcontext" target="_blank" rel="noopener noreferrer">Svelte Context</a> if available.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">CONTEXT_STATE</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"><span style="color: #D4D4D4">};</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-duration-has" tabindex="-1">
+<a class="header-anchor" href="#context-duration-has" aria-hidden="true">#</a> <code>CONTEXT_DURATION.has</code></h3>
+<p><code>CONTEXT_DURATION.has</code> returns if there are available <code>framerate</code> and <code>maxframes</code> Stores in the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_DURATION</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">IS_AVAILABLE</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_DURATION</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">();</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-duration-get" tabindex="-1">
+<a class="header-anchor" href="#context-duration-get" aria-hidden="true">#</a> <code>CONTEXT_DURATION.get</code></h3>
+<p><code>CONTEXT_DURATION.get</code> makes a new <code>state</code> Store if it can retrieve the <code>framerate</code> and <code>maxframes</code> Stores in the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_DURATION</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">duration_store</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_DURATION</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">();</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div></article>
+
+      <hr class="border-gray-divider mt-20">
+
+        <div class="992:text-xl flex items-center pt-12 pb-20 text-lg font-semibold text-gray-300"><div class="mb-4 flex flex-col items-start"><span class="text-gray-inverse ml-3 mb-4 inline-block">Previous</span>
+              
+  <a class="group transform-gpu text-lg font-medium transition-transform hover:scale-105 hover:text-gray-inverse" href="/references/core/stores-completion" sveltekit:prefetch><span class="opacity-0 transition-opacity duration-100 group-hover:visible group-hover:opacity-100 inline-block">&lt;-</span>
+    <span class="inline-block transform transition-transform duration-100 group-hover:translate-x-0 -translate-x-3 ">Stores - Completion</span>
+    </a></div>
+
+          <div class="ml-auto mb-4 flex flex-col items-end"><span class="text-gray-inverse mr-3 mb-4 inline-block">Next</span>
+              
+  <a class="group transform-gpu text-lg font-medium transition-transform hover:scale-105 hover:text-gray-inverse" href="/references/core/stores-frame" sveltekit:prefetch>
+    <span class="inline-block transform transition-transform duration-100 group-hover:translate-x-0 translate-x-2">Stores - Frame</span>
+    <span class="opacity-0 transition-opacity duration-100 group-hover:visible group-hover:opacity-100 inline-block">-&gt;</span></a></div></div>
+
+      </main>
+
+    <div class="992:flex-1"></div>
+
+    <div class="on-this-page pt-8 pb-8 hidden overflow-auto min-w-[160px] sticky right-4 pr-4 1440:right-6 1440:pr-2 1280:block pl-0.5 top-[var(--kd--navbar-height)] max-h-[calc(100vh-var(--kd--navbar-height))]" style=""><h5 class="font-semibold w-full text-left text-gray-inverse text-lg">On this page</h5>
+    <ul class="space-y-4 mt-4"><li class="text-gray-soft hover:text-gray-inverse"><a href="#imports">Imports</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#definitions">Definitions</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#usage">Usage</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#context-duration">CONTEXT_DURATION</a></li>
+        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-duration-has">CONTEXT_DURATION.has</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-duration-get">CONTEXT_DURATION.get</a>
+              </li>
+          </ul></ul></div></div></div>
+
+
+		<script type="module" data-hydrate="6400va">
+		import { start } from "/_app/start-b077cbfd.js";
+		start({
+			target: document.querySelector('[data-hydrate="6400va"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout-kit-docs.svelte-65c49d4e.js"),
+						import("/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js"),
+						import("/_app/pages/references/_...2_core/_...2_stores-duration.md-384d0cd8.js")
+				],
+				params: {"2":""},
+				routeId: "references/[...2]core/[...2]stores-duration"
+			}
+		});
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-duration.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"Definitions\",\"slug\":\"definitions\",\"children\":[]},{\"level\":2,\"title\":\"Usage\",\"slug\":\"usage\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_DURATION\",\"slug\":\"context-duration\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_DURATION.has\",\"slug\":\"context-duration-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_DURATION.get\",\"slug\":\"context-duration-get\",\"children\":[]}]}],\"title\":\"Stores - Duration\",\"frontmatter\":{\"title\":\"Stores - Duration\"},\"lastUpdated\":1652056969961}"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Metadata\":[{\"title\":\"Overview\",\"slug\":\"/references/metadata/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}]}}"}</script></div>
+    </body>
+</html>

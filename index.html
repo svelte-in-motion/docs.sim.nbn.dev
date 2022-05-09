@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="icon"
+            href="./favicon.png"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+
+        <script>
+            const key = "svelteness::color-scheme";
+            const scheme = localStorage[key];
+            const prefersDark = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+            if (
+                scheme === "dark" ||
+                (scheme !== "light" && prefersDark)
+            ) {
+                document.documentElement.classList.add(
+                    "dark"
+                );
+            } else {
+                document.documentElement.classList.remove(
+                    "dark"
+                );
+            }
+        </script>
+
+        <meta http-equiv="content-security-policy" content=""><title>Create Videos with Web Technology! | Svelte-In-Motion</title>
+        
+	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
+	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
+	<link rel="modulepreload" href="/_app/start-b077cbfd.js">
+	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
+	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
+	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-65c49d4e.js">
+	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
+	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
+	<link rel="modulepreload" href="/_app/pages/index@kit-docs.md-386e4dec.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
+	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
+    </head>
+    <body>
+        <div>
+
+
+
+
+<div class="kit-docs bg-gray-body min-h-full min-w-full h-full transition-transform duration-150 ease-out" style="font-family: var(--kd-font-family-sans, inherit); --kd-breadcrumbs-height: 0px; --kd--navbar-height: calc(var(--kd-navbar-height) + var(--kd-breadcrumbs-height));"><div class="fixed top-0 z-30 w-full flex-none transform-gpu transition-transform duration-150 ease-out supports-backdrop-blur:bg-white/60 bg-gray-200/95 backdrop-blur dark:bg-gray-800/60 translate-y-0" style="border-bottom: var(--kd-navbar-border-bottom);"><div class="flex w-full flex-col items-center justify-center mx-auto max-w-[var(--kd-navbar-max-width)] p-[var(--kd-navbar-padding)] h-[var(--kd--navbar-height)]"><div class="flex w-full items-center"><div class="logo svelte-wkjwtt" slot="navbar-left">
+  <a class="group transform-gpu text-lg font-medium transition-transform hover:scale-105" href="/">
+    <span class="inline-block transform transition-transform duration-100 group-hover:translate-x-0">Svelte-In-Motion</span>
+    </a></div>
+        
+
+    <div class="flex-1"></div>
+
+    <div class="992:hidden -mr-2 flex items-center">
+
+      <div class="relative inline-block text-left not-prose"><button id="popover-button-1" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="popover-1" aria-expanded="false" aria-haspopup="true"><svg width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z"/><!-- HTML_TAG_END --></svg>
+          <span class="sr-only">Main navigation menu</span>
+        </button>
+
+  <div class="fixed top-0 left-0 bg-black/40 backdrop-blur-sm dark:bg-gray-700/80 transition-opacity duration-75 pointer-events-auto z-40 w-screen h-screen opacity-0 invisible"></div>
+
+  <div hidden></div>
+
+</div></div>
+
+    <div class="992:flex 992:items-center hidden"><nav><ul class="flex items-center space-x-8 text-lg font-medium"><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 text-gray-soft hover:text-gray-inverse" href="/docs">Docs</a></li><li class="mt-4 first:mt-0 992:mt-0"><a class="p-1 text-gray-soft hover:text-gray-inverse" href="/references">API References</a></li></ul></nav>
+
+      
+        
+
+      <div class="border-gray-divider ml-6 mr-2.5 h-7 w-2 border-l-[1.5px]"></div>
+
+      <div class="hidden 992:flex items-center">
+        
+        <div class="relative inline-block text-left not-prose"><button id="menu-button-1" type="button" class="inline-flex w-full justify-center rounded-md p-2 text-lg font-medium text-gray-soft hover:text-gray-inverse" aria-controls="menu-1" aria-expanded="false" aria-haspopup="true"><svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="h-6 w-6"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/><!-- HTML_TAG_END --></svg>
+    <span class="sr-only">Color Scheme</span>
+  </button>
+
+  <div hidden></div>
+
+</div></div></div></div>
+
+  
+
+          
+        </div></div>
+
+  <div class="mx-auto w-full flex flex-row min-h-full max-w-[var(--kd-content-max-width)] pt-[var(--kd--navbar-height)] z-20">
+
+    <main class="w-full overflow-x-hidden 992:min-h-[calc(100vh-var(--kd--navbar-height))] min-h-[calc(100vh-var(--kd--navbar-height))] px-6 pt-8" style="max-width: var(--kd-main-max-width, var(--kd-article-max-width));">
+
+      <article class="markdown prose dark:prose-invert z-10 max-w-[var(--kd-article-max-width)]">
+
+          <div style="max-width: 992px; margin: 0 auto;"><h1>Create Videos with Web Technology!</h1>
+<p>Using Svelte and Web APIs, effortlessly create videos for technical documentation, presentations, etc without ever touching an old fashioned video editor.</p>
+<p>
+<a href="//" target="_blank" rel="noopener noreferrer">Docs</a> 
+<a href="https://github.com/novacbn/svelte-in-motion" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+<h2 id="real-videos-no-widgets" tabindex="-1">
+<a class="header-anchor" href="#real-videos-no-widgets" aria-hidden="true">#</a> Real Videos, no Widgets</h2>
+<p>Svele-In-Motion uses the ever prevalent 
+<a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer">ffmpeg</a> to create <code>.mp4</code>, <code>.webm</code>, etc files that you can upload and embed anywhere! And, it uses the excellent 
+<a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener noreferrer">ffmpeg.wasm</a> to run the whole workflow in your Browser.</p>
+<h2 id="in-browser-or-on-desktop" tabindex="-1">
+<a class="header-anchor" href="#in-browser-or-on-desktop" aria-hidden="true">#</a> In-Browser or On Desktop</h2>
+<p>From creation to video rendering, Svelte-In-Motion&#39;s workflow can run completely in your Browser locally. Or, you can download a packaged desktop version powered by 
+<a href="https://tauri.studio" target="_blank" rel="noopener noreferrer">Tauri</a> from 
+<a href="https://github.com/novacbn/svelte-in-motion/releases" target="_blank" rel="noopener noreferrer">Releases</a>.</p>
+<h2 id="realtime-previews-and-editing" tabindex="-1">
+<a class="header-anchor" href="#realtime-previews-and-editing" aria-hidden="true">#</a> Realtime Previews and Editing</h2>
+<p>Svelte-In-Motion provides an IDE so you never have to leave the application for anything. With a functional virtual filesystem and code editor.</p>
+<h2 id="programatic-video-creation" tabindex="-1">
+<a class="header-anchor" href="#programatic-video-creation" aria-hidden="true">#</a> Programatic Video Creation</h2>
+<p>Since all Svelte-In-Motion videos are just 
+<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a> Components and regular Web Platform, you can create videos to exact specifications.</p></div></article>
+
+      
+
+      </main>
+
+    <div class="992:flex-1"></div>
+
+    <div class="on-this-page pt-8 pb-8 hidden overflow-auto min-w-[160px] sticky right-4 pr-4 1440:right-6 1440:pr-2 1280:block pl-0.5 top-[var(--kd--navbar-height)] max-h-[calc(100vh-var(--kd--navbar-height))]" style=""><h5 class="font-semibold w-full text-left text-gray-inverse text-lg">On this page</h5>
+    <ul class="space-y-4 mt-4"><li class="text-gray-soft hover:text-gray-inverse"><a href="#real-videos-no-widgets">Real Videos, no Widgets</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#in-browser-or-on-desktop">In-Browser or On Desktop</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#realtime-previews-and-editing">Realtime Previews and Editing</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#programatic-video-creation">Programatic Video Creation</a></li>
+        </ul></div></div></div>
+
+
+		<script type="module" data-hydrate="97m6br">
+		import { start } from "/_app/start-b077cbfd.js";
+		start({
+			target: document.querySelector('[data-hydrate="97m6br"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout-kit-docs.svelte-65c49d4e.js"),
+						import("/_app/pages/index@kit-docs.md-386e4dec.js")
+				],
+				params: {},
+				routeId: "@kit-docs"
+			}
+		});
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/index.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Real Videos, no Widgets\",\"slug\":\"real-videos-no-widgets\",\"children\":[]},{\"level\":2,\"title\":\"In-Browser or On Desktop\",\"slug\":\"in-browser-or-on-desktop\",\"children\":[]},{\"level\":2,\"title\":\"Realtime Previews and Editing\",\"slug\":\"realtime-previews-and-editing\",\"children\":[]},{\"level\":2,\"title\":\"Programatic Video Creation\",\"slug\":\"programatic-video-creation\",\"children\":[]}],\"title\":\"Create Videos with Web Technology!\",\"frontmatter\":{},\"lastUpdated\":1652039293199}"}</script></div>
+    </body>
+</html>

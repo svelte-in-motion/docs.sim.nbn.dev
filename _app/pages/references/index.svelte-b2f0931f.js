@@ -1,0 +1,1 @@
+import{S as r,i as s,s as t}from"../../chunks/index-fdc571c5.js";const a=!0;function u(){return{status:307,redirect:"/references/references/overview"}}class c extends r{constructor(e){super(),s(this,e,null,null,t,{})}}export{c as default,u as load,a as prerender};

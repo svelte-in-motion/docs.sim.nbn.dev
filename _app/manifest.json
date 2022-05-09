@@ -1,0 +1,867 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-b077cbfd.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_singletons-01f6dffe.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/runtime/components/layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/__layout-kit-docs.svelte",
+      "src/routes/docs/__layout@kit-docs.svelte",
+      "src/routes/references/__layout@kit-docs.svelte",
+      "src/routes/docs/[...1]getting-started/[...1]installation.md",
+      "src/routes/docs/[...1]getting-started/[...2]preview-video.md",
+      "src/routes/docs/[...1]getting-started/[...3]render-video.md",
+      "src/routes/docs/[...2]concepts/[...1]playback-system.md",
+      "src/routes/docs/[...2]concepts/[...2]configuration.md",
+      "src/routes/docs/[...3]rendering/[...1]frames.md",
+      "src/routes/docs/[...3]rendering/[...2]videos.md",
+      "src/routes/docs/[...3]rendering/[...3]codecs.md",
+      "src/routes/docs/[...3]rendering/[...4]crf.md",
+      "src/routes/docs/[...3]rendering/[...5]pixel-formats.md",
+      "src/routes/docs/[...4]embedding/[...1]video-files.md",
+      "src/routes/docs/[...4]embedding/[...2]runtime-player.md",
+      "src/routes/docs/index.svelte",
+      "src/routes/index@kit-docs.md",
+      "src/routes/references/[...1]references/[...1]overview.md",
+      "src/routes/references/[...1]references/[...2]contexts.md",
+      "src/routes/references/[...2]animations/[...1]overview.md",
+      "src/routes/references/[...2]animations/[...2]actions-transition.md",
+      "src/routes/references/[...2]animations/[...3]components-fade.md",
+      "src/routes/references/[...2]animations/[...3]components-playback.md",
+      "src/routes/references/[...2]animations/[...3]components-rotate.md",
+      "src/routes/references/[...2]animations/[...3]components-scale.md",
+      "src/routes/references/[...2]animations/[...3]components-transition.md",
+      "src/routes/references/[...2]animations/[...3]components-translate.md",
+      "src/routes/references/[...2]animations/[...4]transitions-opacity.md",
+      "src/routes/references/[...2]animations/[...4]transitions-rotate.md",
+      "src/routes/references/[...2]animations/[...4]transitions-scale.md",
+      "src/routes/references/[...2]animations/[...4]transitions-translate.md",
+      "src/routes/references/[...2]bundling/[...1]overview.md",
+      "src/routes/references/[...2]bundling/[...2]bundle.md",
+      "src/routes/references/[...2]core/[...1]overview.md",
+      "src/routes/references/[...2]core/[...2]stores-advance.md",
+      "src/routes/references/[...2]core/[...2]stores-completion.md",
+      "src/routes/references/[...2]core/[...2]stores-duration.md",
+      "src/routes/references/[...2]core/[...2]stores-frame.md",
+      "src/routes/references/[...2]core/[...2]stores-framerate.md",
+      "src/routes/references/[...2]core/[...2]stores-interpolate.md",
+      "src/routes/references/[...2]core/[...2]stores-maxframes.md",
+      "src/routes/references/[...2]core/[...2]stores-playing.md",
+      "src/routes/references/[...2]core/[...2]stores-random.md",
+      "src/routes/references/[...2]core/[...2]stores-seek.md",
+      "src/routes/references/[...2]core/[...2]stores-state.md",
+      "src/routes/references/[...2]encoding/[...1]overview.md",
+      "src/routes/references/[...2]metadata/[...1]overview.md",
+      "src/routes/references/[...2]storage/[...1]overview.md",
+      "src/routes/references/[...2]storage/[...2]drivers-idriver.md",
+      "src/routes/references/[...2]storage/[...2]drivers-indexeddb.md",
+      "src/routes/references/[...2]storage/[...3]utilities-compression.md",
+      "src/routes/references/[...2]storage/[...3]utilities-encoding.md",
+      "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md",
+      "src/routes/references/index.svelte"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "layout.svelte-d8281dbe.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-79a1d96a.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "src/routes/__layout-kit-docs.svelte": {
+    "file": "pages/__layout-kit-docs.svelte-65c49d4e.js",
+    "src": "src/routes/__layout-kit-docs.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_contexts-ecb88871.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ],
+    "css": [
+      "assets/pages/__layout-kit-docs.svelte-b8c444d1.css"
+    ],
+    "assets": [
+      "assets/Inter-VF.roman-latin-1b58736b.woff2",
+      "assets/Inter-VF.italic-latin-65279caf.woff2",
+      "assets/FiraCode-VF-05b30ba3.woff2",
+      "assets/FiraCode-VF-71c5868a.woff"
+    ]
+  },
+  "src/routes/docs/__layout@kit-docs.svelte": {
+    "file": "pages/docs/__layout@kit-docs.svelte-47378824.js",
+    "src": "src/routes/docs/__layout@kit-docs.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "src/routes/references/__layout@kit-docs.svelte": {
+    "file": "pages/references/__layout@kit-docs.svelte-d31f0fcf.js",
+    "src": "src/routes/references/__layout@kit-docs.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "src/routes/docs/[...1]getting-started/[...1]installation.md": {
+    "file": "pages/docs/_...1_getting-started/_...1_installation.md-73bb474a.js",
+    "src": "src/routes/docs/[...1]getting-started/[...1]installation.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...1]getting-started/[...2]preview-video.md": {
+    "file": "pages/docs/_...1_getting-started/_...2_preview-video.md-607d5cca.js",
+    "src": "src/routes/docs/[...1]getting-started/[...2]preview-video.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...1]getting-started/[...3]render-video.md": {
+    "file": "pages/docs/_...1_getting-started/_...3_render-video.md-c4848e92.js",
+    "src": "src/routes/docs/[...1]getting-started/[...3]render-video.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...2]concepts/[...1]playback-system.md": {
+    "file": "pages/docs/_...2_concepts/_...1_playback-system.md-3dd7f0c9.js",
+    "src": "src/routes/docs/[...2]concepts/[...1]playback-system.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...2]concepts/[...2]configuration.md": {
+    "file": "pages/docs/_...2_concepts/_...2_configuration.md-e017bda4.js",
+    "src": "src/routes/docs/[...2]concepts/[...2]configuration.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...3]rendering/[...1]frames.md": {
+    "file": "pages/docs/_...3_rendering/_...1_frames.md-63bd482e.js",
+    "src": "src/routes/docs/[...3]rendering/[...1]frames.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...3]rendering/[...2]videos.md": {
+    "file": "pages/docs/_...3_rendering/_...2_videos.md-d923c7de.js",
+    "src": "src/routes/docs/[...3]rendering/[...2]videos.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...3]rendering/[...3]codecs.md": {
+    "file": "pages/docs/_...3_rendering/_...3_codecs.md-968d2bb6.js",
+    "src": "src/routes/docs/[...3]rendering/[...3]codecs.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...3]rendering/[...4]crf.md": {
+    "file": "pages/docs/_...3_rendering/_...4_crf.md-6be5021f.js",
+    "src": "src/routes/docs/[...3]rendering/[...4]crf.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...3]rendering/[...5]pixel-formats.md": {
+    "file": "pages/docs/_...3_rendering/_...5_pixel-formats.md-53c148bd.js",
+    "src": "src/routes/docs/[...3]rendering/[...5]pixel-formats.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...4]embedding/[...1]video-files.md": {
+    "file": "pages/docs/_...4_embedding/_...1_video-files.md-e54e97af.js",
+    "src": "src/routes/docs/[...4]embedding/[...1]video-files.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/[...4]embedding/[...2]runtime-player.md": {
+    "file": "pages/docs/_...4_embedding/_...2_runtime-player.md-3a586097.js",
+    "src": "src/routes/docs/[...4]embedding/[...2]runtime-player.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/docs/index.svelte": {
+    "file": "pages/docs/index.svelte-f84542c8.js",
+    "src": "src/routes/docs/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "src/routes/index@kit-docs.md": {
+    "file": "pages/index@kit-docs.md-386e4dec.js",
+    "src": "src/routes/index@kit-docs.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/references/[...1]references/[...1]overview.md": {
+    "file": "pages/references/_...1_references/_...1_overview.md-44457a67.js",
+    "src": "src/routes/references/[...1]references/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/references/[...1]references/[...2]contexts.md": {
+    "file": "pages/references/_...1_references/_...2_contexts.md-0b5d80a5.js",
+    "src": "src/routes/references/[...1]references/[...2]contexts.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...1]overview.md": {
+    "file": "pages/references/_...2_animations/_...1_overview.md-3541aef8.js",
+    "src": "src/routes/references/[...2]animations/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...2]actions-transition.md": {
+    "file": "pages/references/_...2_animations/_...2_actions-transition.md-af636dd3.js",
+    "src": "src/routes/references/[...2]animations/[...2]actions-transition.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-fade.md": {
+    "file": "pages/references/_...2_animations/_...3_components-fade.md-1f01281e.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-fade.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-playback.md": {
+    "file": "pages/references/_...2_animations/_...3_components-playback.md-1ff0280a.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-playback.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-rotate.md": {
+    "file": "pages/references/_...2_animations/_...3_components-rotate.md-96f8663c.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-rotate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-scale.md": {
+    "file": "pages/references/_...2_animations/_...3_components-scale.md-58ac19ee.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-scale.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-transition.md": {
+    "file": "pages/references/_...2_animations/_...3_components-transition.md-ce8b611c.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-transition.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...3]components-translate.md": {
+    "file": "pages/references/_...2_animations/_...3_components-translate.md-20e772a1.js",
+    "src": "src/routes/references/[...2]animations/[...3]components-translate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...4]transitions-opacity.md": {
+    "file": "pages/references/_...2_animations/_...4_transitions-opacity.md-a88f461e.js",
+    "src": "src/routes/references/[...2]animations/[...4]transitions-opacity.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...4]transitions-rotate.md": {
+    "file": "pages/references/_...2_animations/_...4_transitions-rotate.md-dd740b6c.js",
+    "src": "src/routes/references/[...2]animations/[...4]transitions-rotate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...4]transitions-scale.md": {
+    "file": "pages/references/_...2_animations/_...4_transitions-scale.md-41933787.js",
+    "src": "src/routes/references/[...2]animations/[...4]transitions-scale.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]animations/[...4]transitions-translate.md": {
+    "file": "pages/references/_...2_animations/_...4_transitions-translate.md-2766f0a0.js",
+    "src": "src/routes/references/[...2]animations/[...4]transitions-translate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]bundling/[...1]overview.md": {
+    "file": "pages/references/_...2_bundling/_...1_overview.md-0fe2feaf.js",
+    "src": "src/routes/references/[...2]bundling/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]bundling/[...2]bundle.md": {
+    "file": "pages/references/_...2_bundling/_...2_bundle.md-a3ffdb25.js",
+    "src": "src/routes/references/[...2]bundling/[...2]bundle.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...1]overview.md": {
+    "file": "pages/references/_...2_core/_...1_overview.md-78d28482.js",
+    "src": "src/routes/references/[...2]core/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-advance.md": {
+    "file": "pages/references/_...2_core/_...2_stores-advance.md-8311c26b.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-advance.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-completion.md": {
+    "file": "pages/references/_...2_core/_...2_stores-completion.md-46a9b3d3.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-completion.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-duration.md": {
+    "file": "pages/references/_...2_core/_...2_stores-duration.md-384d0cd8.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-duration.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-frame.md": {
+    "file": "pages/references/_...2_core/_...2_stores-frame.md-7bb4800a.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-frame.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-framerate.md": {
+    "file": "pages/references/_...2_core/_...2_stores-framerate.md-88aa27df.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-framerate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-interpolate.md": {
+    "file": "pages/references/_...2_core/_...2_stores-interpolate.md-2c9efa4b.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-interpolate.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-maxframes.md": {
+    "file": "pages/references/_...2_core/_...2_stores-maxframes.md-56e80394.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-maxframes.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-playing.md": {
+    "file": "pages/references/_...2_core/_...2_stores-playing.md-fff86387.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-playing.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-random.md": {
+    "file": "pages/references/_...2_core/_...2_stores-random.md-c75d012a.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-random.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-seek.md": {
+    "file": "pages/references/_...2_core/_...2_stores-seek.md-896bffee.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-seek.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]core/[...2]stores-state.md": {
+    "file": "pages/references/_...2_core/_...2_stores-state.md-c8b41ae9.js",
+    "src": "src/routes/references/[...2]core/[...2]stores-state.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]encoding/[...1]overview.md": {
+    "file": "pages/references/_...2_encoding/_...1_overview.md-b6e76e96.js",
+    "src": "src/routes/references/[...2]encoding/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]metadata/[...1]overview.md": {
+    "file": "pages/references/_...2_metadata/_...1_overview.md-aaf3137c.js",
+    "src": "src/routes/references/[...2]metadata/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...1]overview.md": {
+    "file": "pages/references/_...2_storage/_...1_overview.md-41715235.js",
+    "src": "src/routes/references/[...2]storage/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...2]drivers-idriver.md": {
+    "file": "pages/references/_...2_storage/_...2_drivers-idriver.md-47b946cd.js",
+    "src": "src/routes/references/[...2]storage/[...2]drivers-idriver.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...2]drivers-indexeddb.md": {
+    "file": "pages/references/_...2_storage/_...2_drivers-indexeddb.md-b7f71a4e.js",
+    "src": "src/routes/references/[...2]storage/[...2]drivers-indexeddb.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...3]utilities-compression.md": {
+    "file": "pages/references/_...2_storage/_...3_utilities-compression.md-9e41fd32.js",
+    "src": "src/routes/references/[...2]storage/[...3]utilities-compression.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...3]utilities-encoding.md": {
+    "file": "pages/references/_...2_storage/_...3_utilities-encoding.md-a9b63a93.js",
+    "src": "src/routes/references/[...2]storage/[...3]utilities-encoding.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md": {
+    "file": "pages/references/_...2_storage/_...3_utilities-mimetypes.md-c11004a0.js",
+    "src": "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/index.svelte": {
+    "file": "pages/references/index.svelte-b2f0931f.js",
+    "src": "src/routes/references/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "_index-fdc571c5.js": {
+    "file": "chunks/index-fdc571c5.js"
+  },
+  "_singletons-01f6dffe.js": {
+    "file": "chunks/singletons-01f6dffe.js",
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "_contexts-ecb88871.js": {
+    "file": "chunks/contexts-ecb88871.js",
+    "imports": [
+      "_index-fdc571c5.js",
+      "_singletons-01f6dffe.js"
+    ]
+  },
+  "_scroll-fc938a7a.js": {
+    "file": "chunks/scroll-fc938a7a.js",
+    "imports": [
+      "_singletons-01f6dffe.js",
+      "_index-fdc571c5.js"
+    ],
+    "css": [
+      "assets/scroll-8521731d.css"
+    ]
+  },
+  "_CodeInline-03f5d050.js": {
+    "file": "chunks/CodeInline-03f5d050.js",
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "_Link-d2aa795f.js": {
+    "file": "chunks/Link-d2aa795f.js",
+    "imports": [
+      "_index-fdc571c5.js"
+    ]
+  },
+  "_Admonition-ec3c5d9c.js": {
+    "file": "chunks/Admonition-ec3c5d9c.js",
+    "imports": [
+      "_index-fdc571c5.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "_CodeFence-bf275b3f.js": {
+    "file": "chunks/CodeFence-bf275b3f.js",
+    "imports": [
+      "_index-fdc571c5.js",
+      "_contexts-ecb88871.js"
+    ]
+  }
+}
