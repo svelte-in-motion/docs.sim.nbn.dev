@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-9fb47b2d.js",
+    "file": "start-f263458f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -529,7 +529,7 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-advance.md": {
-    "file": "pages/references/_...2_core/_...2_stores-advance.md-8311c26b.js",
+    "file": "pages/references/_...2_core/_...2_stores-advance.md-5861a5bc.js",
     "src": "src/routes/references/[...2]core/[...2]stores-advance.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -544,7 +544,7 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-completion.md": {
-    "file": "pages/references/_...2_core/_...2_stores-completion.md-46a9b3d3.js",
+    "file": "pages/references/_...2_core/_...2_stores-completion.md-391af382.js",
     "src": "src/routes/references/[...2]core/[...2]stores-completion.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -559,7 +559,7 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-duration.md": {
-    "file": "pages/references/_...2_core/_...2_stores-duration.md-384d0cd8.js",
+    "file": "pages/references/_...2_core/_...2_stores-duration.md-5719e533.js",
     "src": "src/routes/references/[...2]core/[...2]stores-duration.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -615,7 +615,7 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-maxframes.md": {
-    "file": "pages/references/_...2_core/_...2_stores-maxframes.md-56e80394.js",
+    "file": "pages/references/_...2_core/_...2_stores-maxframes.md-5f141c58.js",
     "src": "src/routes/references/[...2]core/[...2]stores-maxframes.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -645,18 +645,22 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-random.md": {
-    "file": "pages/references/_...2_core/_...2_stores-random.md-c75d012a.js",
+    "file": "pages/references/_...2_core/_...2_stores-random.md-4df095f6.js",
     "src": "src/routes/references/[...2]core/[...2]stores-random.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-fdc571c5.js",
       "_scroll-fc938a7a.js",
-      "_singletons-01f6dffe.js"
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-seek.md": {
-    "file": "pages/references/_...2_core/_...2_stores-seek.md-896bffee.js",
+    "file": "pages/references/_...2_core/_...2_stores-seek.md-31b6ea08.js",
     "src": "src/routes/references/[...2]core/[...2]stores-seek.md",
     "isEntry": true,
     "isDynamicEntry": true,

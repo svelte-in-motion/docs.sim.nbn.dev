@@ -35,14 +35,17 @@
         
 	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
 	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
-	<link rel="modulepreload" href="/_app/start-9fb47b2d.js">
+	<link rel="modulepreload" href="/_app/start-f263458f.js">
 	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
 	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-f6c00a68.js">
 	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
 	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
 	<link rel="modulepreload" href="/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js">
-	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-random.md-c75d012a.js">
+	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-random.md-4df095f6.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeFence-bf275b3f.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
+	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
     </head>
     <body>
         <div>
@@ -255,7 +258,312 @@
           
 
 <h1>Stores - Random</h1>
-<p>...</p></article>
+<p><code>random</code> / <code>random_float</code> / <code>random_integer</code> are 
+<a href="https://svelte.dev/docs#run-time-svelte-store-writable" target="_blank" rel="noopener noreferrer">Svelte Stores</a> that generate random numeric values that are deterministic to the current video frame. As long as the seed remains the same through each playback.</p>
+<h2 id="imports" tabindex="-1">
+<a class="header-anchor" href="#imports" aria-hidden="true">#</a> Imports</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">CONTEXT_RANDOM</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">CONTEXT_RANDOM_FLOAT</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">CONTEXT_RANDOM_INTEGER</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">random</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">random_float</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">random_integer</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="random" tabindex="-1">
+<a class="header-anchor" href="#random" aria-hidden="true">#</a> <code>random</code></h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #DCDCAA">random</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">?: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">IFrameStore</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">}) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p><code>random</code> generates a random numeric decimal value in the <code>0.0...1.0</code> range, derived from the current frame using an Mersenne Twister implementation.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">random</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    } </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">frame_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">frame</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">random_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">random</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame:</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">frame_store</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">random_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="random-float" tabindex="-1">
+<a class="header-anchor" href="#random-float" aria-hidden="true">#</a> <code>random_float</code></h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #DCDCAA">random_float</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">?: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">IFrameStore</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">end</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">start</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">}) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p><code>random_float</code> generates a random float value in the configured <code>${start}...${end}</code> range, derived from the current frame.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">random</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    } </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">frame_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">frame</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">float_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">random</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame:</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">frame_store</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">4.2</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">float_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="random-integer" tabindex="-1">
+<a class="header-anchor" href="#random-integer" aria-hidden="true">#</a> <code>random_integer</code></h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #DCDCAA">random_float</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">?: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">IFrameStore</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">end</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">start</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">}) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><p><code>random_integer</code> generates a random integer value in the configured <code>${start}...${end}</code> range, derived from the current frame.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">random</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    } </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">frame_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">frame</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">integer_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">random</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">frame:</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">frame_store</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">42</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">integer_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="context-random" tabindex="-1">
+<a class="header-anchor" href="#context-random" aria-hidden="true">#</a> <code>CONTEXT_RANDOM</code></h2>
+<p><code>CONTEXT_RANDOM</code> handles making a new <code>random</code> Store based on the current 
+<a href="https://svelte.dev/docs#run-time-svelte-setcontext" target="_blank" rel="noopener noreferrer">Svelte Context</a> if available.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">CONTEXT_STATE</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">    }) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"><span style="color: #D4D4D4">};</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-has" tabindex="-1">
+<a class="header-anchor" href="#context-random-has" aria-hidden="true">#</a> <code>CONTEXT_RANDOM.has</code></h3>
+<p><code>CONTEXT_RANDOM.has</code> returns if there is an available <code>frame</code> Store in the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">IS_AVAILABLE</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">();</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-get" tabindex="-1">
+<a class="header-anchor" href="#context-random-get" aria-hidden="true">#</a> <code>CONTEXT_RANDOM.get</code></h3>
+<p><code>CONTEXT_RANDOM.get</code> makes a new <code>random</code> Store if it can retrieve the <code>frame</code> Store from the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">random_store</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">random_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="context-random-float" tabindex="-1">
+<a class="header-anchor" href="#context-random-float" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_FLOAT</code></h2>
+<p><code>CONTEXT_RANDOM_FLOAT</code> handles making a new <code>random_float</code> Store based on the current 
+<a href="https://svelte.dev/docs#run-time-svelte-setcontext" target="_blank" rel="noopener noreferrer">Svelte Context</a> if available.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">CONTEXT_STATE</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">    }) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"><span style="color: #D4D4D4">};</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-float-has" tabindex="-1">
+<a class="header-anchor" href="#context-random-float-has" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_FLOAT.has</code></h3>
+<p><code>CONTEXT_RANDOM_FLOAT.has</code> returns if there is an available <code>frame</code> Store in the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM_FLOAT</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">IS_AVAILABLE</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM_FLOAT</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">();</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-float-get" tabindex="-1">
+<a class="header-anchor" href="#context-random-float-get" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_FLOAT.get</code></h3>
+<p><code>CONTEXT_RANDOM_FLOAT.get</code> makes a new <code>random_float</code> Store if it can retrieve the <code>frame</code> Store from the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM_FLOAT</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">float_store</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM_FLOAT</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">4.2</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">float_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="context-random-integer" tabindex="-1">
+<a class="header-anchor" href="#context-random-integer" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_INTEGER</code></h2>
+<p><code>CONTEXT_RANDOM_INTEGER</code> handles making a new <code>random_integer</code> Store based on the current 
+<a href="https://svelte.dev/docs#run-time-svelte-setcontext" target="_blank" rel="noopener noreferrer">Svelte Context</a> if available.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">CONTEXT_STATE</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">    }) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Readable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"><span style="color: #D4D4D4">};</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-integer-has" tabindex="-1">
+<a class="header-anchor" href="#context-random-integer-has" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_INTEGER.has</code></h3>
+<p><code>CONTEXT_RANDOM_INTEGER.has</code> returns if there is an available <code>frame</code> Store in the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM_INTEGER</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">IS_AVAILABLE</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM_INTEGER</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">();</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h3 id="context-random-integer-get" tabindex="-1">
+<a class="header-anchor" href="#context-random-integer-get" aria-hidden="true">#</a> <code>CONTEXT_RANDOM_INTEGER.get</code></h3>
+<p><code>CONTEXT_RANDOM_INTEGER.get</code> makes a new <code>random_integer</code> Store if it can retrieve the <code>frame</code> Store from the current Context.</p>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_RANDOM_INTEGER</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">integer_store</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_RANDOM_INTEGER</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">({</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">seed:</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;my seed!&quot;</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">4.2</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C8C8C8">$</span><span style="color: #D4D4D4">: </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">($</span><span style="color: #9CDCFE">integer_store</span><span style="color: #D4D4D4">);</span></span>
+<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div></article>
 
       <hr class="border-gray-divider mt-20">
 
@@ -275,13 +583,36 @@
 
     <div class="992:flex-1"></div>
 
-    </div></div>
+    <div class="on-this-page pt-8 pb-8 hidden overflow-auto min-w-[160px] sticky right-4 pr-4 1440:right-6 1440:pr-2 1280:block pl-0.5 top-[var(--kd--navbar-height)] max-h-[calc(100vh-var(--kd--navbar-height))]" style=""><h5 class="font-semibold w-full text-left text-gray-inverse text-lg">On this page</h5>
+    <ul class="space-y-4 mt-4"><li class="text-gray-soft hover:text-gray-inverse"><a href="#imports">Imports</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#random">random</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#random-float">random_float</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#random-integer">random_integer</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#context-random">CONTEXT_RANDOM</a></li>
+        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-has">CONTEXT_RANDOM.has</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-get">CONTEXT_RANDOM.get</a>
+              </li>
+          </ul><li class="text-gray-soft hover:text-gray-inverse"><a href="#context-random-float">CONTEXT_RANDOM_FLOAT</a></li>
+        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-float-has">CONTEXT_RANDOM_FLOAT.has</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-float-get">CONTEXT_RANDOM_FLOAT.get</a>
+              </li>
+          </ul><li class="text-gray-soft hover:text-gray-inverse"><a href="#context-random-integer">CONTEXT_RANDOM_INTEGER</a></li>
+        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-integer-has">CONTEXT_RANDOM_INTEGER.has</a>
+              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
+                <a href="#context-random-integer-get">CONTEXT_RANDOM_INTEGER.get</a>
+              </li>
+          </ul></ul></div></div></div>
 
 
-		<script type="module" data-hydrate="q8k7kk">
-		import { start } from "/_app/start-9fb47b2d.js";
+		<script type="module" data-hydrate="wq84pg">
+		import { start } from "/_app/start-f263458f.js";
 		start({
-			target: document.querySelector('[data-hydrate="q8k7kk"]').parentNode,
+			target: document.querySelector('[data-hydrate="wq84pg"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -293,13 +624,13 @@
 				nodes: [
 					import("/_app/pages/__layout-kit-docs.svelte-f6c00a68.js"),
 						import("/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js"),
-						import("/_app/pages/references/_...2_core/_...2_stores-random.md-c75d012a.js")
+						import("/_app/pages/references/_...2_core/_...2_stores-random.md-4df095f6.js")
 				],
 				params: {"2":""},
 				routeId: "references/[...2]core/[...2]stores-random"
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-random.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[],\"title\":\"Stores - Random\",\"frontmatter\":{\"title\":\"Stores - Random\"},\"lastUpdated\":1652081597960}"}</script>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-random.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"random\",\"slug\":\"random\",\"children\":[]},{\"level\":2,\"title\":\"random_float\",\"slug\":\"random-float\",\"children\":[]},{\"level\":2,\"title\":\"random_integer\",\"slug\":\"random-integer\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_RANDOM\",\"slug\":\"context-random\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM.has\",\"slug\":\"context-random-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM.get\",\"slug\":\"context-random-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_FLOAT\",\"slug\":\"context-random-float\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.has\",\"slug\":\"context-random-float-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.get\",\"slug\":\"context-random-float-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_INTEGER\",\"slug\":\"context-random-integer\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.has\",\"slug\":\"context-random-integer-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.get\",\"slug\":\"context-random-integer-get\",\"children\":[]}]}],\"title\":\"Stores - Random\",\"frontmatter\":{\"title\":\"Stores - Random\"},\"lastUpdated\":1652083572919}"}</script>
 	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Metadata\":[{\"title\":\"Overview\",\"slug\":\"/references/metadata/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}]}}"}</script></div>
     </body>
 </html>
