@@ -3,6 +3,7 @@
 
     export const load = createKitDocsLoader({
         sidebar: {
+            // @ts-expect-error
             "/": null,
             "/docs": "/docs",
             "/references": "/references",
