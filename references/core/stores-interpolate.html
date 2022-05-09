@@ -35,14 +35,17 @@
         
 	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
 	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
-	<link rel="modulepreload" href="/_app/start-f263458f.js">
+	<link rel="modulepreload" href="/_app/start-9f308fd6.js">
 	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
 	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-f6c00a68.js">
 	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
 	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
 	<link rel="modulepreload" href="/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js">
-	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-interpolate.md-2c9efa4b.js">
+	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-interpolate.md-358b5e4d.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeFence-bf275b3f.js">
+	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
+	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
     </head>
     <body>
         <div>
@@ -255,7 +258,73 @@
           
 
 <h1>Stores - Interpolate</h1>
-<p>...</p></article>
+<p><code>interpolate</code> is a 
+<a href="https://svelte.dev/docs#run-time-svelte-store-writable" target="_blank" rel="noopener noreferrer">Svelte Store</a> for deterministically interating through a range of numeric values via setting a <code>0.0...1.0</code> state value.</p>
+<h2 id="imports" tabindex="-1">
+<a class="header-anchor" href="#imports" aria-hidden="true">#</a> Imports</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">interpolate</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="definitions" tabindex="-1">
+<a class="header-anchor" href="#definitions" aria-hidden="true">#</a> Definitions</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #DCDCAA">interpolate</span><span style="color: #D4D4D4">: (</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">state</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">options</span><span style="color: #D4D4D4">?: {</span></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #DCDCAA">easing</span><span style="color: #D4D4D4">?: (</span><span style="color: #9CDCFE">completion</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">end</span><span style="color: #D4D4D4">?:</span></span>
+<span class="line"><span style="color: #D4D4D4">            | </span><span style="color: #4EC9B0">number</span></span>
+<span class="line"><span style="color: #D4D4D4">            | {</span></span>
+<span class="line"><span style="color: #D4D4D4">                  </span><span style="color: #9CDCFE">extrapolate</span><span style="color: #D4D4D4">?:</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;clamp&quot;</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;extend&quot;</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;wrap&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">                  </span><span style="color: #9CDCFE">value</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">              };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">start</span><span style="color: #D4D4D4">?:</span></span>
+<span class="line"><span style="color: #D4D4D4">            | </span><span style="color: #4EC9B0">number</span></span>
+<span class="line"><span style="color: #D4D4D4">            | {</span></span>
+<span class="line"><span style="color: #D4D4D4">                  </span><span style="color: #9CDCFE">extrapolate</span><span style="color: #D4D4D4">?:</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;clamp&quot;</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;extend&quot;</span></span>
+<span class="line"><span style="color: #D4D4D4">                      | </span><span style="color: #CE9178">&quot;wrap&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">                  </span><span style="color: #9CDCFE">value</span><span style="color: #D4D4D4">?: </span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">              };</span></span>
+<span class="line"><span style="color: #D4D4D4">    }</span></span>
+<span class="line"><span style="color: #D4D4D4">) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Writable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div><h2 id="usage" tabindex="-1">
+<a class="header-anchor" href="#usage" aria-hidden="true">#</a> Usage</h2>
+<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
+
+  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">interpolate</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">interpolate_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">interpolate</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">0</span><span style="color: #D4D4D4">, {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">start:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0.25</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">end:</span><span style="color: #D4D4D4"> </span><span style="color: #B5CEA8">0.8</span><span style="color: #D4D4D4">,</span></span>
+<span class="line"><span style="color: #D4D4D4">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #9CDCFE">interpolate</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">subscribe</span><span style="color: #D4D4D4">((</span><span style="color: #9CDCFE">value</span><span style="color: #D4D4D4">) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #9CDCFE">console</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">log</span><span style="color: #D4D4D4">({</span><span style="color: #9CDCFE">value</span><span style="color: #D4D4D4">}));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #9CDCFE">interpolate</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">set</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">0.25</span><span style="color: #D4D4D4">); </span><span style="color: #6A9955">// `{value: 0.3875}`</span></span>
+<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
+
+    
+
+    </div></div></article>
 
       <hr class="border-gray-divider mt-20">
 
@@ -275,13 +344,17 @@
 
     <div class="992:flex-1"></div>
 
-    </div></div>
+    <div class="on-this-page pt-8 pb-8 hidden overflow-auto min-w-[160px] sticky right-4 pr-4 1440:right-6 1440:pr-2 1280:block pl-0.5 top-[var(--kd--navbar-height)] max-h-[calc(100vh-var(--kd--navbar-height))]" style=""><h5 class="font-semibold w-full text-left text-gray-inverse text-lg">On this page</h5>
+    <ul class="space-y-4 mt-4"><li class="text-gray-soft hover:text-gray-inverse"><a href="#imports">Imports</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#definitions">Definitions</a></li>
+        <li class="text-gray-soft hover:text-gray-inverse"><a href="#usage">Usage</a></li>
+        </ul></div></div></div>
 
 
-		<script type="module" data-hydrate="c40blg">
-		import { start } from "/_app/start-f263458f.js";
+		<script type="module" data-hydrate="6zksv0">
+		import { start } from "/_app/start-9f308fd6.js";
 		start({
-			target: document.querySelector('[data-hydrate="c40blg"]').parentNode,
+			target: document.querySelector('[data-hydrate="6zksv0"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -293,13 +366,13 @@
 				nodes: [
 					import("/_app/pages/__layout-kit-docs.svelte-f6c00a68.js"),
 						import("/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js"),
-						import("/_app/pages/references/_...2_core/_...2_stores-interpolate.md-2c9efa4b.js")
+						import("/_app/pages/references/_...2_core/_...2_stores-interpolate.md-358b5e4d.js")
 				],
 				params: {"2":""},
 				routeId: "references/[...2]core/[...2]stores-interpolate"
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-interpolate.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[],\"title\":\"Stores - Interpolate\",\"frontmatter\":{\"title\":\"Stores - Interpolate\"},\"lastUpdated\":1652083572919}"}</script>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-interpolate.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"Definitions\",\"slug\":\"definitions\",\"children\":[]},{\"level\":2,\"title\":\"Usage\",\"slug\":\"usage\",\"children\":[]}],\"title\":\"Stores - Interpolate\",\"frontmatter\":{\"title\":\"Stores - Interpolate\"},\"lastUpdated\":1652084915767}"}</script>
 	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Metadata\":[{\"title\":\"Overview\",\"slug\":\"/references/metadata/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}]}}"}</script></div>
     </body>
 </html>

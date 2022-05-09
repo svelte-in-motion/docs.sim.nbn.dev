@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-f263458f.js",
+    "file": "start-9f308fd6.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -604,14 +604,18 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-interpolate.md": {
-    "file": "pages/references/_...2_core/_...2_stores-interpolate.md-2c9efa4b.js",
+    "file": "pages/references/_...2_core/_...2_stores-interpolate.md-358b5e4d.js",
     "src": "src/routes/references/[...2]core/[...2]stores-interpolate.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-fdc571c5.js",
       "_scroll-fc938a7a.js",
-      "_singletons-01f6dffe.js"
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-maxframes.md": {
