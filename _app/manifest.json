@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-9f308fd6.js",
+    "file": "start-4dc40b80.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -43,6 +43,7 @@
       "src/routes/references/[...2]animations/[...4]transitions-translate.md",
       "src/routes/references/[...2]bundling/[...1]overview.md",
       "src/routes/references/[...2]bundling/[...2]bundle.md",
+      "src/routes/references/[...2]configuration/[...1]overview.md",
       "src/routes/references/[...2]core/[...1]overview.md",
       "src/routes/references/[...2]core/[...2]stores-advance.md",
       "src/routes/references/[...2]core/[...2]stores-completion.md",
@@ -56,13 +57,16 @@
       "src/routes/references/[...2]core/[...2]stores-seek.md",
       "src/routes/references/[...2]core/[...2]stores-state.md",
       "src/routes/references/[...2]encoding/[...1]overview.md",
-      "src/routes/references/[...2]metadata/[...1]overview.md",
       "src/routes/references/[...2]storage/[...1]overview.md",
       "src/routes/references/[...2]storage/[...2]drivers-idriver.md",
       "src/routes/references/[...2]storage/[...2]drivers-indexeddb.md",
-      "src/routes/references/[...2]storage/[...3]utilities-compression.md",
-      "src/routes/references/[...2]storage/[...3]utilities-encoding.md",
-      "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md",
+      "src/routes/references/[...2]storage/[...3]stores-file.md",
+      "src/routes/references/[...2]storage/[...4]utilities-compression.md",
+      "src/routes/references/[...2]storage/[...4]utilities-encoding.md",
+      "src/routes/references/[...2]storage/[...4]utilities-mimetypes.md",
+      "src/routes/references/[...2]utilities/[...1]overview.md",
+      "src/routes/references/[...2]utilities/[...2]stores-collection.md",
+      "src/routes/references/[...2]utilities/[...2]stores-immutable.md",
       "src/routes/references/index.svelte"
     ]
   },
@@ -289,7 +293,7 @@
     ]
   },
   "src/routes/references/[...1]references/[...2]contexts.md": {
-    "file": "pages/references/_...1_references/_...2_contexts.md-0b5d80a5.js",
+    "file": "pages/references/_...1_references/_...2_contexts.md-4c069439.js",
     "src": "src/routes/references/[...1]references/[...2]contexts.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -513,6 +517,20 @@
       "_contexts-ecb88871.js"
     ]
   },
+  "src/routes/references/[...2]configuration/[...1]overview.md": {
+    "file": "pages/references/_...2_configuration/_...1_overview.md-ff8059d9.js",
+    "src": "src/routes/references/[...2]configuration/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
   "src/routes/references/[...2]core/[...1]overview.md": {
     "file": "pages/references/_...2_core/_...1_overview.md-78d28482.js",
     "src": "src/routes/references/[...2]core/[...1]overview.md",
@@ -707,22 +725,8 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]metadata/[...1]overview.md": {
-    "file": "pages/references/_...2_metadata/_...1_overview.md-aaf3137c.js",
-    "src": "src/routes/references/[...2]metadata/[...1]overview.md",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-fdc571c5.js",
-      "_scroll-fc938a7a.js",
-      "_Link-d2aa795f.js",
-      "_Admonition-ec3c5d9c.js",
-      "_singletons-01f6dffe.js",
-      "_contexts-ecb88871.js"
-    ]
-  },
   "src/routes/references/[...2]storage/[...1]overview.md": {
-    "file": "pages/references/_...2_storage/_...1_overview.md-41715235.js",
+    "file": "pages/references/_...2_storage/_...1_overview.md-1b7437cd.js",
     "src": "src/routes/references/[...2]storage/[...1]overview.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -766,9 +770,9 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]storage/[...3]utilities-compression.md": {
-    "file": "pages/references/_...2_storage/_...3_utilities-compression.md-9e41fd32.js",
-    "src": "src/routes/references/[...2]storage/[...3]utilities-compression.md",
+  "src/routes/references/[...2]storage/[...3]stores-file.md": {
+    "file": "pages/references/_...2_storage/_...3_stores-file.md-d63965ac.js",
+    "src": "src/routes/references/[...2]storage/[...3]stores-file.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -781,9 +785,9 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]storage/[...3]utilities-encoding.md": {
-    "file": "pages/references/_...2_storage/_...3_utilities-encoding.md-a9b63a93.js",
-    "src": "src/routes/references/[...2]storage/[...3]utilities-encoding.md",
+  "src/routes/references/[...2]storage/[...4]utilities-compression.md": {
+    "file": "pages/references/_...2_storage/_...4_utilities-compression.md-62f81036.js",
+    "src": "src/routes/references/[...2]storage/[...4]utilities-compression.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -796,9 +800,9 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md": {
-    "file": "pages/references/_...2_storage/_...3_utilities-mimetypes.md-c11004a0.js",
-    "src": "src/routes/references/[...2]storage/[...3]utilities-mimetypes.md",
+  "src/routes/references/[...2]storage/[...4]utilities-encoding.md": {
+    "file": "pages/references/_...2_storage/_...4_utilities-encoding.md-78235e4e.js",
+    "src": "src/routes/references/[...2]storage/[...4]utilities-encoding.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -807,6 +811,67 @@
       "_CodeFence-bf275b3f.js",
       "_CodeInline-03f5d050.js",
       "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]storage/[...4]utilities-mimetypes.md": {
+    "file": "pages/references/_...2_storage/_...4_utilities-mimetypes.md-f4750ccf.js",
+    "src": "src/routes/references/[...2]storage/[...4]utilities-mimetypes.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...1]overview.md": {
+    "file": "pages/references/_...2_utilities/_...1_overview.md-3493374d.js",
+    "src": "src/routes/references/[...2]utilities/[...1]overview.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...2]stores-collection.md": {
+    "file": "pages/references/_...2_utilities/_...2_stores-collection.md-a61b90ec.js",
+    "src": "src/routes/references/[...2]utilities/[...2]stores-collection.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...2]stores-immutable.md": {
+    "file": "pages/references/_...2_utilities/_...2_stores-immutable.md-457a5a0d.js",
+    "src": "src/routes/references/[...2]utilities/[...2]stores-immutable.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
       "_singletons-01f6dffe.js",
       "_contexts-ecb88871.js"
     ]
