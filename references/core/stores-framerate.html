@@ -35,14 +35,14 @@
         
 	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
 	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
-	<link rel="modulepreload" href="/_app/start-67765158.js">
+	<link rel="modulepreload" href="/_app/start-e5ad46c2.js">
 	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
 	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-f6c00a68.js">
 	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
 	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
 	<link rel="modulepreload" href="/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js">
-	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-framerate.md-88aa27df.js">
+	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-framerate.md-1332db04.js">
 	<link rel="modulepreload" href="/_app/chunks/CodeFence-bf275b3f.js">
 	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
 	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
@@ -265,6 +265,9 @@
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/stores-immutable" style="">
                   Stores - Immutable
                   </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-contexts" style="">
+                  Utilities - Contexts
+                  </a>
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-environment" style="">
                   Utilities - Environment
                   </a>
@@ -279,6 +282,12 @@
                   </a>
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-string" style="">
                   Utilities - String
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-timing" style="">
+                  Utilities - Timing
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-url" style="">
+                  Utilities - URL
                   </a>
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-web" style="">
                   Utilities - Web
@@ -336,64 +345,19 @@
 
     </div></div><h2 id="context-framerate" tabindex="-1">
 <a class="header-anchor" href="#context-framerate" aria-hidden="true">#</a> <code>CONTEXT_FRAMERATE</code></h2>
-<p><code>CONTEXT_FRAMERATE</code> handles making a new <code>framerate</code> store based on the current 
-<a href="https://svelte.dev/docs#run-time-svelte-setcontext" target="_blank" rel="noopener noreferrer">Svelte Context</a>.</p>
+<p><code>CONTEXT_FRAMERATE</code> represents a 
+<a href="/references/utilities/utilities-contexts#make-scoped-context">Scoped Context</a>.</p>
 <div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-typescript ext-ts" style="background-color: var(--kd-code-fence-bg);">
 
   <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #C586C0">export</span><span style="color: #D4D4D4"> </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">: {</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #9CDCFE">key</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">string</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"></span>
 <span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Writable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">boolean</span><span style="color: #D4D4D4">&gt;;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">: () </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">Writable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">set</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">framerate</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">Writable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">void</span><span style="color: #D4D4D4">;</span></span>
+<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #DCDCAA">set</span><span style="color: #D4D4D4">: (</span><span style="color: #9CDCFE">frame</span><span style="color: #D4D4D4">: </span><span style="color: #4EC9B0">Writable</span><span style="color: #D4D4D4">&lt;</span><span style="color: #4EC9B0">number</span><span style="color: #D4D4D4">&gt;) </span><span style="color: #569CD6">=&gt;</span><span style="color: #D4D4D4"> </span><span style="color: #4EC9B0">void</span><span style="color: #D4D4D4">;</span></span>
 <span class="line"><span style="color: #D4D4D4">};</span></span>
-<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
-
-    
-
-    </div></div><h3 id="context-framerate-has" tabindex="-1">
-<a class="header-anchor" href="#context-framerate-has" aria-hidden="true">#</a> <code>CONTEXT_FRAMERATE.has</code></h3>
-<p><code>CONTEXT_FRAMERATE.has</code> returns if there are available <code>framerate</code> Store in the current Context.</p>
-<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
-
-  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">IS_AVAILABLE</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">has</span><span style="color: #D4D4D4">();</span></span>
-<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
-<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
-
-    
-
-    </div></div><h3 id="context-framerate-get" tabindex="-1">
-<a class="header-anchor" href="#context-framerate-get" aria-hidden="true">#</a> <code>CONTEXT_FRAMERATE.get</code></h3>
-<p><code>CONTEXT_FRAMERATE.get</code> returns the <code>framerate</code> Store from the current Context, if available.</p>
-<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
-
-  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span><span style="color: #9CDCFE">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">} </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">framerate_store</span><span style="color: #D4D4D4"> = </span><span style="color: #4FC1FF">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">get</span><span style="color: #D4D4D4">();</span></span>
-<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
-<span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
-
-    
-
-    </div></div><h3 id="context-framerate-set" tabindex="-1">
-<a class="header-anchor" href="#context-framerate-set" aria-hidden="true">#</a> <code>CONTEXT_FRAMERATE.set</code></h3>
-<p><code>CONTEXT_FRAMERATE.set</code> assigns a <code>framerate</code> Store to the current Context.</p>
-<div class="code-fence overflow-y-auto relative max-h-[60vh] 576:max-h-[32rem] my-8 rounded-md shadow-lg mx-auto border border-gray-divider lang-svelte ext-svelte" style="background-color: var(--kd-code-fence-bg);">
-
-  <div class="code relative z-0 overflow-hidden"><div class=""><!-- HTML_TAG_START --><pre><code><span class="line"><span style="color: #808080">&lt;</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #C586C0">import</span><span style="color: #D4D4D4"> {</span></span>
-<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">,</span></span>
-<span class="line"><span style="color: #D4D4D4">        </span><span style="color: #9CDCFE">framerate</span><span style="color: #D4D4D4">,</span></span>
-<span class="line"><span style="color: #D4D4D4">    } </span><span style="color: #C586C0">from</span><span style="color: #D4D4D4"> </span><span style="color: #CE9178">&quot;@svelte-in-motion/core&quot;</span><span style="color: #D4D4D4">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #569CD6">const</span><span style="color: #D4D4D4"> </span><span style="color: #4FC1FF">framerate_store</span><span style="color: #D4D4D4"> = </span><span style="color: #DCDCAA">framerate</span><span style="color: #D4D4D4">(</span><span style="color: #B5CEA8">60</span><span style="color: #D4D4D4">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #D4D4D4">    </span><span style="color: #4FC1FF">CONTEXT_FRAMERATE</span><span style="color: #D4D4D4">.</span><span style="color: #DCDCAA">set</span><span style="color: #D4D4D4">(</span><span style="color: #9CDCFE">framerate_store</span><span style="color: #D4D4D4">);</span></span>
-<span class="line"><span style="color: #808080">&lt;/</span><span style="color: #569CD6">script</span><span style="color: #808080">&gt;</span></span>
 <span class="line"></span></code></pre><!-- HTML_TAG_END --></div>
 
     
@@ -423,20 +387,13 @@
         <li class="text-gray-soft hover:text-gray-inverse"><a href="#definitions">Definitions</a></li>
         <li class="text-gray-soft hover:text-gray-inverse"><a href="#usage">Usage</a></li>
         <li class="text-gray-soft hover:text-gray-inverse"><a href="#context-framerate">CONTEXT_FRAMERATE</a></li>
-        <ul class="space-y-3"><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
-                <a href="#context-framerate-has">CONTEXT_FRAMERATE.has</a>
-              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
-                <a href="#context-framerate-get">CONTEXT_FRAMERATE.get</a>
-              </li><li class="flex group group text-gray-soft hover:text-gray-inverse"><svg width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-px mt-px text-gray-300 dark:text-gray-400 group-hover:text-gray-soft"><!-- HTML_TAG_START --><path fill="currentColor" d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243l-1.414-1.415z"/><!-- HTML_TAG_END --></svg>
-                <a href="#context-framerate-set">CONTEXT_FRAMERATE.set</a>
-              </li>
-          </ul></ul></div></div></div>
+        </ul></div></div></div>
 
 
-		<script type="module" data-hydrate="19a45v0">
-		import { start } from "/_app/start-67765158.js";
+		<script type="module" data-hydrate="3phheh">
+		import { start } from "/_app/start-e5ad46c2.js";
 		start({
-			target: document.querySelector('[data-hydrate="19a45v0"]').parentNode,
+			target: document.querySelector('[data-hydrate="3phheh"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -448,13 +405,13 @@
 				nodes: [
 					import("/_app/pages/__layout-kit-docs.svelte-f6c00a68.js"),
 						import("/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js"),
-						import("/_app/pages/references/_...2_core/_...2_stores-framerate.md-88aa27df.js")
+						import("/_app/pages/references/_...2_core/_...2_stores-framerate.md-1332db04.js")
 				],
 				params: {"2":""},
 				routeId: "references/[...2]core/[...2]stores-framerate"
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-framerate.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"Definitions\",\"slug\":\"definitions\",\"children\":[]},{\"level\":2,\"title\":\"Usage\",\"slug\":\"usage\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_FRAMERATE\",\"slug\":\"context-framerate\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_FRAMERATE.has\",\"slug\":\"context-framerate-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_FRAMERATE.get\",\"slug\":\"context-framerate-get\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_FRAMERATE.set\",\"slug\":\"context-framerate-set\",\"children\":[]}]}],\"title\":\"Stores - Frame Rate\",\"frontmatter\":{\"title\":\"Stores - Frame Rate\"},\"lastUpdated\":1652400693103}"}</script>
-	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Configuration\":[{\"title\":\"Overview\",\"slug\":\"/references/configuration/overview\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Stores - File\",\"slug\":\"/references/storage/stores-file\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}],\"Utilities\":[{\"title\":\"Overview\",\"slug\":\"/references/utilities/overview\"},{\"title\":\"Events - Channel\",\"slug\":\"/references/utilities/events-channel\"},{\"title\":\"Events - Event\",\"slug\":\"/references/utilities/events-event\"},{\"title\":\"Stores - Collection\",\"slug\":\"/references/utilities/stores-collection\"},{\"title\":\"Stores - Immutable\",\"slug\":\"/references/utilities/stores-immutable\"},{\"title\":\"Utilities - Environment\",\"slug\":\"/references/utilities/utilities-environment\"},{\"title\":\"Utilities - Math\",\"slug\":\"/references/utilities/utilities-math\"},{\"title\":\"Utilities - Object\",\"slug\":\"/references/utilities/utilities-object\"},{\"title\":\"Utilities - Random\",\"slug\":\"/references/utilities/utilities-random\"},{\"title\":\"Utilities - String\",\"slug\":\"/references/utilities/utilities-string\"},{\"title\":\"Utilities - Web\",\"slug\":\"/references/utilities/utilities-web\"}]}}"}</script></div>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-framerate.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"Definitions\",\"slug\":\"definitions\",\"children\":[]},{\"level\":2,\"title\":\"Usage\",\"slug\":\"usage\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_FRAMERATE\",\"slug\":\"context-framerate\",\"children\":[]}],\"title\":\"Stores - Frame Rate\",\"frontmatter\":{\"title\":\"Stores - Frame Rate\"},\"lastUpdated\":1652404553352}"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Configuration\":[{\"title\":\"Overview\",\"slug\":\"/references/configuration/overview\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Stores - File\",\"slug\":\"/references/storage/stores-file\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}],\"Utilities\":[{\"title\":\"Overview\",\"slug\":\"/references/utilities/overview\"},{\"title\":\"Events - Channel\",\"slug\":\"/references/utilities/events-channel\"},{\"title\":\"Events - Event\",\"slug\":\"/references/utilities/events-event\"},{\"title\":\"Stores - Collection\",\"slug\":\"/references/utilities/stores-collection\"},{\"title\":\"Stores - Immutable\",\"slug\":\"/references/utilities/stores-immutable\"},{\"title\":\"Utilities - Contexts\",\"slug\":\"/references/utilities/utilities-contexts\"},{\"title\":\"Utilities - Environment\",\"slug\":\"/references/utilities/utilities-environment\"},{\"title\":\"Utilities - Math\",\"slug\":\"/references/utilities/utilities-math\"},{\"title\":\"Utilities - Object\",\"slug\":\"/references/utilities/utilities-object\"},{\"title\":\"Utilities - Random\",\"slug\":\"/references/utilities/utilities-random\"},{\"title\":\"Utilities - String\",\"slug\":\"/references/utilities/utilities-string\"},{\"title\":\"Utilities - Timing\",\"slug\":\"/references/utilities/utilities-timing\"},{\"title\":\"Utilities - URL\",\"slug\":\"/references/utilities/utilities-url\"},{\"title\":\"Utilities - Web\",\"slug\":\"/references/utilities/utilities-web\"}]}}"}</script></div>
     </body>
 </html>
