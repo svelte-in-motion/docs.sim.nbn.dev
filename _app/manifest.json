@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-a20db10f.js",
+    "file": "start-4fae2cb6.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -75,6 +75,7 @@
       "src/routes/references/[...2]utilities/[...4]utilities-math.md",
       "src/routes/references/[...2]utilities/[...4]utilities-object.md",
       "src/routes/references/[...2]utilities/[...4]utilities-random.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-router.md",
       "src/routes/references/[...2]utilities/[...4]utilities-string.md",
       "src/routes/references/[...2]utilities/[...4]utilities-timing.md",
       "src/routes/references/[...2]utilities/[...4]utilities-url.md",
@@ -1009,6 +1010,21 @@
       "_CodeInline-03f5d050.js",
       "_Link-d2aa795f.js",
       "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-router.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-router.md-61c6b79a.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-router.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
       "_singletons-01f6dffe.js",
       "_contexts-ecb88871.js"
     ]
