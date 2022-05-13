@@ -35,17 +35,18 @@
         
 	<link rel="stylesheet" href="/_app/assets/pages/__layout-kit-docs.svelte-b8c444d1.css">
 	<link rel="stylesheet" href="/_app/assets/scroll-8521731d.css">
-	<link rel="modulepreload" href="/_app/start-ca491f28.js">
+	<link rel="modulepreload" href="/_app/start-67765158.js">
 	<link rel="modulepreload" href="/_app/chunks/index-fdc571c5.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-01f6dffe.js">
 	<link rel="modulepreload" href="/_app/pages/__layout-kit-docs.svelte-f6c00a68.js">
 	<link rel="modulepreload" href="/_app/chunks/contexts-ecb88871.js">
 	<link rel="modulepreload" href="/_app/chunks/scroll-fc938a7a.js">
 	<link rel="modulepreload" href="/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js">
-	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-random.md-4df095f6.js">
+	<link rel="modulepreload" href="/_app/pages/references/_...2_core/_...2_stores-random.md-6382fcbf.js">
 	<link rel="modulepreload" href="/_app/chunks/CodeFence-bf275b3f.js">
 	<link rel="modulepreload" href="/_app/chunks/CodeInline-03f5d050.js">
 	<link rel="modulepreload" href="/_app/chunks/Link-d2aa795f.js">
+	<link rel="modulepreload" href="/_app/chunks/Admonition-ec3c5d9c.js">
     </head>
     <body>
         <div>
@@ -253,11 +254,35 @@
           <ul class="border-gray-divider space-y-3 border-l"><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/overview" style="">
                   Overview
                   </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/events-channel" style="">
+                  Events - Channel
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/events-event" style="">
+                  Events - Event
+                  </a>
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/stores-collection" style="">
                   Stores - Collection
                   </a>
               </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/stores-immutable" style="">
                   Stores - Immutable
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-environment" style="">
+                  Utilities - Environment
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-math" style="">
+                  Utilities - Math
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-object" style="">
+                  Utilities - Object
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-random" style="">
+                  Utilities - Random
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-string" style="">
+                  Utilities - String
+                  </a>
+              </li><li class="first:mt-6"><a class="992:py-1.5 -ml-px flex items-center border-l-2 py-2 pl-4 hover:border-gray-inverse text-gray-soft hover:text-gray-inverse border-transparent font-normal" href="/references/utilities/utilities-web" style="">
+                  Utilities - Web
                   </a>
               </li></ul>
         </li></ul>
@@ -274,6 +299,14 @@
           
 
 <h1>Stores - Random</h1>
+<div class="admonition my-8 border-2 border-l-8 p-4 rounded-md mx-auto shadow-xl border-yellow-400 bg-yellow-400/10"><div class="flex h-full items-center font-bold text-yellow-400"><svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-1.5 text-xl"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm-1-7v2h2v-2h-2zm0-8v6h2V7h-2z"/><!-- HTML_TAG_END --></svg>
+    <span class="flex items-center">WARNING</span></div>
+
+  <div class="pl-1 text-lg text-gray-inverse"><p>The random number generator used is not guaranteed to be cryptographically secure <strong>OR</strong> the same algorithm between Svelte-In-Motion versions!</p></div></div>
+<div class="admonition my-8 border-2 border-l-8 p-4 rounded-md mx-auto shadow-xl border-red-400 bg-red-300/10"><div class="flex h-full items-center font-bold text-red-400"><svg width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="mr-1.5 text-xl"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10v3.764a2 2 0 0 1-1.106 1.789L18 19v1a3 3 0 0 1-2.824 2.995L14.95 23a2.5 2.5 0 0 0 .044-.33L15 22.5V22a2 2 0 0 0-1.85-1.995L13 20h-2a2 2 0 0 0-1.995 1.85L9 22v.5c0 .171.017.339.05.5H9a3 3 0 0 1-3-3v-1l-2.894-1.447A2 2 0 0 1 2 15.763V12C2 6.477 6.477 2 12 2zm-4 9a2 2 0 1 0 0 4a2 2 0 0 0 0-4zm8 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4z"/><!-- HTML_TAG_END --></svg>
+    <span class="flex items-center">DANGER</span></div>
+
+  <div class="pl-1 text-lg text-gray-inverse"><p>Always generate your numbers in the same order, or deterministic generation can <strong>NOT</strong> be guaranteed.</p></div></div>
 <p><code>random</code> / <code>random_float</code> / <code>random_integer</code> are 
 <a href="https://svelte.dev/docs#run-time-svelte-store-writable" target="_blank" rel="noopener noreferrer">Svelte Stores</a> that generate random numeric values that are deterministic to the current video frame. As long as the seed remains the same through each playback.</p>
 <h2 id="imports" tabindex="-1">
@@ -625,10 +658,10 @@
           </ul></ul></div></div></div>
 
 
-		<script type="module" data-hydrate="k62mq6">
-		import { start } from "/_app/start-ca491f28.js";
+		<script type="module" data-hydrate="1n9q74p">
+		import { start } from "/_app/start-67765158.js";
 		start({
-			target: document.querySelector('[data-hydrate="k62mq6"]').parentNode,
+			target: document.querySelector('[data-hydrate="1n9q74p"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -640,13 +673,13 @@
 				nodes: [
 					import("/_app/pages/__layout-kit-docs.svelte-f6c00a68.js"),
 						import("/_app/pages/references/__layout@kit-docs.svelte-d31f0fcf.js"),
-						import("/_app/pages/references/_...2_core/_...2_stores-random.md-4df095f6.js")
+						import("/_app/pages/references/_...2_core/_...2_stores-random.md-6382fcbf.js")
 				],
 				params: {"2":""},
 				routeId: "references/[...2]core/[...2]stores-random"
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-random.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"random\",\"slug\":\"random\",\"children\":[]},{\"level\":2,\"title\":\"random_float\",\"slug\":\"random-float\",\"children\":[]},{\"level\":2,\"title\":\"random_integer\",\"slug\":\"random-integer\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_RANDOM\",\"slug\":\"context-random\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM.has\",\"slug\":\"context-random-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM.get\",\"slug\":\"context-random-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_FLOAT\",\"slug\":\"context-random-float\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.has\",\"slug\":\"context-random-float-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.get\",\"slug\":\"context-random-float-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_INTEGER\",\"slug\":\"context-random-integer\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.has\",\"slug\":\"context-random-integer-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.get\",\"slug\":\"context-random-integer-get\",\"children\":[]}]}],\"title\":\"Stores - Random\",\"frontmatter\":{\"title\":\"Stores - Random\"},\"lastUpdated\":1652265902888}"}</script>
-	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Configuration\":[{\"title\":\"Overview\",\"slug\":\"/references/configuration/overview\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Stores - File\",\"slug\":\"/references/storage/stores-file\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}],\"Utilities\":[{\"title\":\"Overview\",\"slug\":\"/references/utilities/overview\"},{\"title\":\"Stores - Collection\",\"slug\":\"/references/utilities/stores-collection\"},{\"title\":\"Stores - Immutable\",\"slug\":\"/references/utilities/stores-immutable\"}]}}"}</script></div>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references_core_stores-random.meta.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"Imports\",\"slug\":\"imports\",\"children\":[]},{\"level\":2,\"title\":\"random\",\"slug\":\"random\",\"children\":[]},{\"level\":2,\"title\":\"random_float\",\"slug\":\"random-float\",\"children\":[]},{\"level\":2,\"title\":\"random_integer\",\"slug\":\"random-integer\",\"children\":[]},{\"level\":2,\"title\":\"CONTEXT_RANDOM\",\"slug\":\"context-random\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM.has\",\"slug\":\"context-random-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM.get\",\"slug\":\"context-random-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_FLOAT\",\"slug\":\"context-random-float\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.has\",\"slug\":\"context-random-float-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_FLOAT.get\",\"slug\":\"context-random-float-get\",\"children\":[]}]},{\"level\":2,\"title\":\"CONTEXT_RANDOM_INTEGER\",\"slug\":\"context-random-integer\",\"children\":[{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.has\",\"slug\":\"context-random-integer-has\",\"children\":[]},{\"level\":3,\"title\":\"CONTEXT_RANDOM_INTEGER.get\",\"slug\":\"context-random-integer-get\",\"children\":[]}]}],\"title\":\"Stores - Random\",\"frontmatter\":{\"title\":\"Stores - Random\"},\"lastUpdated\":1652400693103}"}</script>
+	<script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/kit-docs/references.sidebar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"links\":{\"References\":[{\"title\":\"Overview\",\"slug\":\"/references/references/overview\"},{\"title\":\"Contexts\",\"slug\":\"/references/references/contexts\"}],\"Animations\":[{\"title\":\"Overview\",\"slug\":\"/references/animations/overview\"},{\"title\":\"Actions - Transition\",\"slug\":\"/references/animations/actions-transition\"},{\"title\":\"Components - Fade\",\"slug\":\"/references/animations/components-fade\"},{\"title\":\"Components - Playback\",\"slug\":\"/references/animations/components-playback\"},{\"title\":\"Components - Rotate\",\"slug\":\"/references/animations/components-rotate\"},{\"title\":\"Components - Scale\",\"slug\":\"/references/animations/components-scale\"},{\"title\":\"Components - Transition\",\"slug\":\"/references/animations/components-transition\"},{\"title\":\"Components - Translate\",\"slug\":\"/references/animations/components-translate\"},{\"title\":\"Transitions - Opacity\",\"slug\":\"/references/animations/transitions-opacity\"},{\"title\":\"Transitions - Rotate\",\"slug\":\"/references/animations/transitions-rotate\"},{\"title\":\"Transitions - Scale\",\"slug\":\"/references/animations/transitions-scale\"},{\"title\":\"Transitions - Translate\",\"slug\":\"/references/animations/transitions-translate\"}],\"Bundling\":[{\"title\":\"Overview\",\"slug\":\"/references/bundling/overview\"},{\"title\":\"bundle\",\"slug\":\"/references/bundling/bundle\"}],\"Configuration\":[{\"title\":\"Overview\",\"slug\":\"/references/configuration/overview\"}],\"Core\":[{\"title\":\"Overview\",\"slug\":\"/references/core/overview\"},{\"title\":\"Stores - Advance\",\"slug\":\"/references/core/stores-advance\"},{\"title\":\"Stores - Completion\",\"slug\":\"/references/core/stores-completion\"},{\"title\":\"Stores - Duration\",\"slug\":\"/references/core/stores-duration\"},{\"title\":\"Stores - Frame\",\"slug\":\"/references/core/stores-frame\"},{\"title\":\"Stores - Frame Rate\",\"slug\":\"/references/core/stores-framerate\"},{\"title\":\"Stores - Interpolate\",\"slug\":\"/references/core/stores-interpolate\"},{\"title\":\"Stores - Max Frames\",\"slug\":\"/references/core/stores-maxframes\"},{\"title\":\"Stores - Playing\",\"slug\":\"/references/core/stores-playing\"},{\"title\":\"Stores - Random\",\"slug\":\"/references/core/stores-random\"},{\"title\":\"Stores - Seek\",\"slug\":\"/references/core/stores-seek\"},{\"title\":\"Stores - State\",\"slug\":\"/references/core/stores-state\"}],\"Encoding\":[{\"title\":\"Overview\",\"slug\":\"/references/encoding/overview\"}],\"Storage\":[{\"title\":\"Overview\",\"slug\":\"/references/storage/overview\"},{\"title\":\"Drivers - IDriver\",\"slug\":\"/references/storage/drivers-idriver\"},{\"title\":\"Drivers - IndexedDB\",\"slug\":\"/references/storage/drivers-indexeddb\"},{\"title\":\"Stores - File\",\"slug\":\"/references/storage/stores-file\"},{\"title\":\"Utilities - Compression\",\"slug\":\"/references/storage/utilities-compression\"},{\"title\":\"Utilities - Encoding\",\"slug\":\"/references/storage/utilities-encoding\"},{\"title\":\"Utilities - Mimetypes\",\"slug\":\"/references/storage/utilities-mimetypes\"}],\"Utilities\":[{\"title\":\"Overview\",\"slug\":\"/references/utilities/overview\"},{\"title\":\"Events - Channel\",\"slug\":\"/references/utilities/events-channel\"},{\"title\":\"Events - Event\",\"slug\":\"/references/utilities/events-event\"},{\"title\":\"Stores - Collection\",\"slug\":\"/references/utilities/stores-collection\"},{\"title\":\"Stores - Immutable\",\"slug\":\"/references/utilities/stores-immutable\"},{\"title\":\"Utilities - Environment\",\"slug\":\"/references/utilities/utilities-environment\"},{\"title\":\"Utilities - Math\",\"slug\":\"/references/utilities/utilities-math\"},{\"title\":\"Utilities - Object\",\"slug\":\"/references/utilities/utilities-object\"},{\"title\":\"Utilities - Random\",\"slug\":\"/references/utilities/utilities-random\"},{\"title\":\"Utilities - String\",\"slug\":\"/references/utilities/utilities-string\"},{\"title\":\"Utilities - Web\",\"slug\":\"/references/utilities/utilities-web\"}]}}"}</script></div>
     </body>
 </html>

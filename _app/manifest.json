@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ca491f28.js",
+    "file": "start-67765158.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -65,8 +65,16 @@
       "src/routes/references/[...2]storage/[...4]utilities-encoding.md",
       "src/routes/references/[...2]storage/[...4]utilities-mimetypes.md",
       "src/routes/references/[...2]utilities/[...1]overview.md",
-      "src/routes/references/[...2]utilities/[...2]stores-collection.md",
-      "src/routes/references/[...2]utilities/[...2]stores-immutable.md",
+      "src/routes/references/[...2]utilities/[...2]events-channel.md",
+      "src/routes/references/[...2]utilities/[...2]events-event.md",
+      "src/routes/references/[...2]utilities/[...3]stores-collection.md",
+      "src/routes/references/[...2]utilities/[...3]stores-immutable.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-environment.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-math.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-object.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-random.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-string.md",
+      "src/routes/references/[...2]utilities/[...4]utilities-web.md",
       "src/routes/references/index.svelte"
     ]
   },
@@ -667,7 +675,7 @@
     ]
   },
   "src/routes/references/[...2]core/[...2]stores-random.md": {
-    "file": "pages/references/_...2_core/_...2_stores-random.md-4df095f6.js",
+    "file": "pages/references/_...2_core/_...2_stores-random.md-6382fcbf.js",
     "src": "src/routes/references/[...2]core/[...2]stores-random.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -677,6 +685,7 @@
       "_CodeFence-bf275b3f.js",
       "_CodeInline-03f5d050.js",
       "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
       "_singletons-01f6dffe.js",
       "_contexts-ecb88871.js"
     ]
@@ -845,9 +854,41 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]utilities/[...2]stores-collection.md": {
-    "file": "pages/references/_...2_utilities/_...2_stores-collection.md-a61b90ec.js",
-    "src": "src/routes/references/[...2]utilities/[...2]stores-collection.md",
+  "src/routes/references/[...2]utilities/[...2]events-channel.md": {
+    "file": "pages/references/_...2_utilities/_...2_events-channel.md-cff5c30f.js",
+    "src": "src/routes/references/[...2]utilities/[...2]events-channel.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...2]events-event.md": {
+    "file": "pages/references/_...2_utilities/_...2_events-event.md-b06fcc9e.js",
+    "src": "src/routes/references/[...2]utilities/[...2]events-event.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...3]stores-collection.md": {
+    "file": "pages/references/_...2_utilities/_...3_stores-collection.md-210b88ad.js",
+    "src": "src/routes/references/[...2]utilities/[...3]stores-collection.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -860,9 +901,9 @@
       "_contexts-ecb88871.js"
     ]
   },
-  "src/routes/references/[...2]utilities/[...2]stores-immutable.md": {
-    "file": "pages/references/_...2_utilities/_...2_stores-immutable.md-c398d557.js",
-    "src": "src/routes/references/[...2]utilities/[...2]stores-immutable.md",
+  "src/routes/references/[...2]utilities/[...3]stores-immutable.md": {
+    "file": "pages/references/_...2_utilities/_...3_stores-immutable.md-c675130e.js",
+    "src": "src/routes/references/[...2]utilities/[...3]stores-immutable.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -872,6 +913,99 @@
       "_CodeInline-03f5d050.js",
       "_Link-d2aa795f.js",
       "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-environment.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-environment.md-5088eacb.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-environment.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-math.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-math.md-42e7f086.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-math.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-object.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-object.md-aecb9235.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-object.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-random.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-random.md-bfff0e63.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-random.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-string.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-string.md-04b380e6.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-string.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
+      "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...4]utilities-web.md": {
+    "file": "pages/references/_...2_utilities/_...4_utilities-web.md-3f60ceaa.js",
+    "src": "src/routes/references/[...2]utilities/[...4]utilities-web.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
       "_singletons-01f6dffe.js",
       "_contexts-ecb88871.js"
     ]
