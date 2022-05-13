@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e5ad46c2.js",
+    "file": "start-a20db10f.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -69,6 +69,7 @@
       "src/routes/references/[...2]utilities/[...2]events-event.md",
       "src/routes/references/[...2]utilities/[...3]stores-collection.md",
       "src/routes/references/[...2]utilities/[...3]stores-immutable.md",
+      "src/routes/references/[...2]utilities/[...3]stores-map.md",
       "src/routes/references/[...2]utilities/[...4]utilities-contexts.md",
       "src/routes/references/[...2]utilities/[...4]utilities-environment.md",
       "src/routes/references/[...2]utilities/[...4]utilities-math.md",
@@ -890,7 +891,7 @@
     ]
   },
   "src/routes/references/[...2]utilities/[...3]stores-collection.md": {
-    "file": "pages/references/_...2_utilities/_...3_stores-collection.md-210b88ad.js",
+    "file": "pages/references/_...2_utilities/_...3_stores-collection.md-0b5c4151.js",
     "src": "src/routes/references/[...2]utilities/[...3]stores-collection.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -916,6 +917,21 @@
       "_CodeInline-03f5d050.js",
       "_Link-d2aa795f.js",
       "_Admonition-ec3c5d9c.js",
+      "_singletons-01f6dffe.js",
+      "_contexts-ecb88871.js"
+    ]
+  },
+  "src/routes/references/[...2]utilities/[...3]stores-map.md": {
+    "file": "pages/references/_...2_utilities/_...3_stores-map.md-1462f213.js",
+    "src": "src/routes/references/[...2]utilities/[...3]stores-map.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-fdc571c5.js",
+      "_scroll-fc938a7a.js",
+      "_CodeFence-bf275b3f.js",
+      "_CodeInline-03f5d050.js",
+      "_Link-d2aa795f.js",
       "_singletons-01f6dffe.js",
       "_contexts-ecb88871.js"
     ]
